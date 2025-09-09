@@ -36,34 +36,21 @@ Este projeto combina:
 ### 1. Clone o Repositório
 
 ```bash
-git clone <seu-repositorio>
-cd rocketseat_ian8n
+git clone https://github.com/italordsantos/desafion8nrocketseat.git
+cd desafion8nrocketseat
 ```
 
 ### 2. Configure as Variáveis de Ambiente
 
 ```bash
-# Copie o arquivo de configuração
-cp env.local .env
-
-# Edite o arquivo .env com suas configurações
+# O arquivo .env já está incluído no repositório
+# Edite o arquivo .env com suas configurações se necessário
 nano .env  # ou use seu editor preferido
 ```
 
 ### 3. Execute o Sistema
 
-**Opção A - Script Automático (Recomendado):**
-
-```bash
-# Windows
-start-local.bat
-
-# Linux/Mac
-chmod +x start-local.sh
-./start-local.sh
-```
-
-**Opção B - Comando Manual:**
+**Comando Manual:**
 
 ```bash
 # Iniciar todos os serviços
@@ -149,14 +136,11 @@ docker-compose exec -T postgresql psql -U n8n_user n8n < backup_n8n.sql
 ## 📁 Estrutura do Projeto
 
 ```
-rocketseat_ian8n/
+desafion8nrocketseat/
 ├── docker-compose.yml          # Configuração principal do Docker
-├── docker-compose-evolution.yml # Configuração de referência
-├── env.local                   # Variáveis de ambiente para local
-├── env.example                 # Exemplo de variáveis de ambiente
-├── start-local.bat            # Script de inicialização (Windows)
-├── start-local.sh             # Script de inicialização (Linux/Mac)
-└── README.md                  # Este arquivo
+├── .env                        # Variáveis de ambiente (já configurado)
+├── .gitignore                  # Arquivos ignorados pelo Git
+└── README.md                   # Este arquivo
 ```
 
 ## 🔒 Segurança
